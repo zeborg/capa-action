@@ -3,7 +3,7 @@ on:
     branches:
       - 'main'
     paths:
-      - 'ci/*'
+      - 'ci/**'
 
 jobs:
   check_k8s_releases:
