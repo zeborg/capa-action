@@ -3,7 +3,7 @@ on:
     branches:
       - 'main'
     paths:
-      - 'ci/*'
+      - 'ci/ami/AMIBuildConfig.json'
 
 jobs:
   presubmit:
