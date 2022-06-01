@@ -3,10 +3,10 @@ on:
     branches:
       - 'main'
     paths:
-      - '.gitub/workflows/ami_periodic.yaml'
-      - '.gitub/workflows/ami_presubmit.yaml'
-      - '.gitub/workflows/ami_postsubmit.yaml'
-      - '.gitub/workflows/ami_periodic.yaml'
+      - '.github/workflows/ami_periodic.yaml'
+      - '.github/workflows/ami_presubmit.yaml'
+      - '.github/workflows/ami_postsubmit.yaml'
+      - '.github/workflows/ami_periodic.yaml'
       - 'ci/**'
 
 jobs:
