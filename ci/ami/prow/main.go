@@ -40,7 +40,7 @@ func main() {
 
 		if stderr != "" {
 			log.Fatalf("Error: %s", stderr)
-		} else if stdout == "" {
+		} else if strings.Contains(stdout, "No AMIs found") {
 			log.Printf("Info: Building AMI for Kubernetes %s.", v)
 			kubernetes_semver := v
 			kubernetes_rpm_version := strings.TrimPrefix(v, "v") + "-0"
