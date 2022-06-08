@@ -230,25 +230,39 @@ A brief description of every file within this project is given below:
     \
     The environment variables that can be set for this workflow along with their defaults are:
     * **AMI_BUILD_CONFIG_FILENAME**
+      \
       Name of the file that stores latest Kubernetes release versions for building AMIs (located in directory `ci/ami` within the repository).
+      \
       Default value: `"AMIBuildConfig.json"`
     * **AMI_BUILD_CONFIG_DEFAULTS**
+      \
       Name of the file that stores default values for the packer variables used by image-builder (located in directory ci/ami within the repository). The global packer variable defaults can be provided in the default field, and the OS-specific packer variable defaults can be provided in the OS fields (i.e. amazon-2, centos-7, flatcar, ubuntu-1804 and ubuntu-2004).
+      \
       Default value: `"AMIBuildConfigDefaults.json"`
     * **AMI_BUILD_SUPPORTED_OS**
+      \
       Operating systems to build the AMIs for.
+      \
       Default value: `"amazon-2,centos-7,flatcar,ubuntu-1804,ubuntu-2004"`
     * **AMI_BUILD_REGIONS**
+      \
       Regions on which the AMIs will be published.
+      \
       Default value: `"ap-south-1,eu-west-3,eu-west-2,eu-west-1,ap-northeast-2,ap-northeast-1,sa-east-1,ca-central-1,ap-southeast-1,ap-southeast-2,eu-central-1,us-east-1,us-east-2,us-west-1,us-west-2"`
     * **AWS_ACCESS_KEY_ID**
+      \
       AWS Access Key ID for the account to be used for publishing AMIs.
+      \
       Default value: `${{ secrets.AWS_ACCESS_KEY_ID }}`
     * **AWS_SECRET_ACCESS_KEY**
+      \
       AWS Secret Access Key for the account to be used for publishing AMIs.
+      \
       Default value: `${{ secrets.AWS_SECRET_ACCESS_KEY }}`
     * **AWS_AMI_OWNER_ID**
+      \
       Owner ID (numeric) of the account on which the AMIs will be published.
+      \
       Default value: None
 * `ci/ami`
   * `custom/funcs.go`
