@@ -5,8 +5,8 @@ authors:
 reviewers:
   - "@sedefsavas"
   - "@richardcase"
-creation-date: 2020-05-05
-last-updated: 2020-05-05
+creation-date: 2022-06-09
+last-updated: 2022-06-09
 status: implementable
 see-also:
 - https://github.com/kubernetes-sigs/cluster-api-provider-aws/issues/1982
@@ -16,6 +16,20 @@ superseded-by: []
 ---
 
 # CAPA GitHub Action for Building/Publishing AMIs
+
+## Table of Contents
+
+- [CAPA GitHub Action for Building/Publishing AMIs](#capa-github-action-for-buildingpublishing-amis)
+  - [Table of Contents](#table-of-contents)
+  - [Summary](#summary)
+  - [Motivation](#motivation)
+  - [Proposal](#proposal)
+    - [Flowchart](#flowchart)
+    - [Components](#components)
+  - [Testing the CAPA GitHub Action](#testing-the-capa-github-action)
+  - [Migrating the Presubmit and Postsubmit Workflows to Prow](#migrating-the-presubmit-and-postsubmit-workflows-to-prow)
+  - [Roadblocks & Limitations](#roadblocks--limitations)
+  - [Scope of Improvement](#scope-of-improvement)
 
 ## Summary
 The Cluster API Provider AWS (CAPA) project builds and publishes AMIs at every new Kubernetes release for the 3 most recent minor versions of Kubernetes. This proposal is aimed towards making this entire process automated over cloud instead of a user’s system by using GitHub Actions.
